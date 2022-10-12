@@ -1,67 +1,81 @@
-:root{
-    --font-family: 'Rubik', sans-serif;
-    --color-body: #3CDBC0;
-
-}
-.header{
-
- background-color: white;
- width: 100vw;
- display: flex;
- flex-direction: column;
- align-items: center;
- position: fixed;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo{
-    width: 155px;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    
+:root {
+  --font-family: "Rubik", sans-serif;
+  --color-body: #3cdbc0;
+  --color-links: #4a4a4a;
 }
-.menu{
-    font-family: var(--font-family);
-    color: #4a4a4a;
-    font-weight: bolder;
-    width: 155px;
+.header {
+  background-color: white;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.logo {
+  width: 155px;
+  margin-top: 10px;
+}
+.links {
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 155px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.list {
+  font-family: var(--font-family);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-links);
+  text-decoration: none;
+  padding: 5px;
+}
+.main {
+  background-color: var(--color-body);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: bolder;
+  display: flex;
+  word-spacing: 100vw;
+  text-align: center;
+  line-height: 40px;
+}
+@media all and (min-width: 768px) {
+  .header {
     display: flex;
-    justify-content: center;
-    padding-bottom: 13px;
-    padding-left:80px;
-    padding-right: 80px;
-    
-}
-.list{
-    width: 100vw;
-    font-family: var(--font-family);
-    display: flex;
-    justify-content: center;
-    
-}
-.main{
-    background-color: var(--color-body);
-    display:flex;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-}
-.title{
-    color: #FFFFFF;
-    font-family: var(--font-family);
-    font-size: 30px;
-    font-weight: bolder;
-    display: flex;
-    word-spacing: 100vw;
-    text-align: center;
-    line-height: 40px;
-    
-}
-@media screen and (min-width: 768px) {
-    .title{
-        font-size: 40px;
-
-    }
+  }
+  .logo {
+    padding: 1rem 0 1rem 2rem;
+  }
+  .links {
+    padding: 1rem 4rem 1rem 0;
+  }
+  .title {
+    font-size: 40px;
+    line-height: 3.2rem;
+  }
 }
